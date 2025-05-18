@@ -1,0 +1,17 @@
+{
+  "frames": [
+    {
+      "url": "https://www.perplexity.ai/",
+      "displayName": "perplexity",
+      "icon": "activity",
+      "hideOnMobile": true,
+      "addRibbonIcon": true,
+      "openInCenter": true,
+      "zoomLevel": 1,
+      "forceIframe": false,
+      "customCss": "",
+      "customJs": ""
+    }
+  ],
+  "padding": 5
+}

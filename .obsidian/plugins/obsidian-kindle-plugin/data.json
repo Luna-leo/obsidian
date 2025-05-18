@@ -1,0 +1,11 @@
+{
+  "amazonRegion": "japan",
+  "highlightsFolder": "BOOKS",
+  "lastSyncMode": "amazon",
+  "isLoggedIn": true,
+  "syncOnBoot": false,
+  "downloadBookMetadata": true,
+  "lastSyncDate": "2025-05-18T10:40:51.539Z",
+  "fileNameTemplate": "{{title}}",
+  "fileTemplate": "{% trim %}\n{% if imageUrl %}\n![image]({{imageUrl}})\n{% endif %}\n{% endtrim %}\n\n### 📘 About\n{% trim %}\n* タイトル：{{longTitle}}\n* 著者: {{author}}\n{% if asin %}* ASIN: {{asin}}{% endif %}\n{% if isbn %}* ISBN: {{isbn}}{% endif %}\n{% if pages %}* ページ数: {{pages}}{% endif %}\n{% if publication %}* 出版日: {{publication}}{% endif %}\n{% if publisher %}* 出版社: {{publisher}}{% endif %}\n{% if asin %}* Amazon: [https://amazon.co.jp/dp/{{asin}}](https://amazon.co.jp/dp/{{asin}}){% endif %}\n{% if appLink %}* [Kindle link]({{appLink}}){% endif %}\n{% endtrim %}\n\n### 💬 Summary\n\n### ✍️ Highlights（{{highlightsCount}}）\n\n{{highlights}}\n\n\n### 📸 Screenshots\n"
+}
