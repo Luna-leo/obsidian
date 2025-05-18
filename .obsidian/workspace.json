@@ -20,6 +20,20 @@
               "icon": "lucide-file",
               "title": "ツール整理"
             }
+          },
+          {
+            "id": "548695d9d7bfed39",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Git管理.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Git管理"
+            }
           }
         ]
       }
@@ -150,13 +164,23 @@
               "icon": "lucide-list",
               "title": "Outline of ツール整理"
             }
+          },
+          {
+            "id": "7610335637d7f11c",
+            "type": "leaf",
+            "state": {
+              "type": "git-history-view",
+              "state": {},
+              "icon": "history",
+              "title": "History"
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 393.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -175,6 +199,7 @@
   },
   "active": "0072288efe82d408",
   "lastOpenFiles": [
+    "Git管理.md",
     "ツール整理.md",
     "{{imageUrl}}.md",
     "BOOKS/Google流 資料作成術.md",
