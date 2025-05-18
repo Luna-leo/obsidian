@@ -1,0 +1,56 @@
+{
+  "id": "46192c5a-2981-4ead-a0a0-b4ef0cf739ff",
+  "title": "hello",
+  "messages": [
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "hello",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\nhello\n\n"
+        }
+      ],
+      "id": "0ada107f-e2e1-4cb2-8460-28792d00a74f",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": "ツール整理.md"
+        }
+      ]
+    }
+  ],
+  "createdAt": 1747571430786,
+  "updatedAt": 1747571430786,
+  "schemaVersion": 1
+}

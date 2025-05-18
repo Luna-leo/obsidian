@@ -174,9 +174,19 @@
               "icon": "history",
               "title": "History"
             }
+          },
+          {
+            "id": "dbf2cd3aec8e2574",
+            "type": "leaf",
+            "state": {
+              "type": "smtcmp-chat-view",
+              "state": {},
+              "icon": "wand-sparkles",
+              "title": "Smart composer chat"
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -194,10 +204,11 @@
       "obsidian-kindle-plugin:Sync your Kindle highlights": false,
       "obsidian-textgenerator-plugin:Generate Text!": false,
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
-      "obsidian-custom-frames:Open perplexity": false
+      "obsidian-custom-frames:Open perplexity": false,
+      "smart-composer:Open smart composer": false
     }
   },
-  "active": "0072288efe82d408",
+  "active": "dbf2cd3aec8e2574",
   "lastOpenFiles": [
     "Git管理.md",
     "ツール整理.md",
