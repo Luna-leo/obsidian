@@ -22,6 +22,20 @@
             }
           },
           {
+            "id": "cc252c35b6c6e1c6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Python.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Python"
+            }
+          },
+          {
             "id": "548695d9d7bfed39",
             "type": "leaf",
             "state": {
@@ -35,7 +49,8 @@
               "title": "Git管理"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -209,10 +224,11 @@
       "smart-composer:Open smart composer": false
     }
   },
-  "active": "0072288efe82d408",
+  "active": "cc252c35b6c6e1c6",
   "lastOpenFiles": [
-    "Git管理.md",
     "ツール整理.md",
+    "Python.md",
+    "Git管理.md",
     "{{imageUrl}}.md",
     "BOOKS/Google流 資料作成術.md",
     "BOOKS/「すぐやる人」のノート術.md",
