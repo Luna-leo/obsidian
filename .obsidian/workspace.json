@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Python.md",
+                "file": "数式入力UI仕様.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Python"
+              "title": "数式入力UI仕様"
             }
           },
           {
@@ -64,7 +64,27 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
+      },
+      {
+        "id": "75cb0093c79ef4ba",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d4bacf1382525949",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "数式入力UI仕様.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "数式入力UI仕様"
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -121,7 +141,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "10c725e97045c940",
@@ -238,10 +259,10 @@
       "smart-composer:Open smart composer": false
     }
   },
-  "active": "dab804895ff43dff",
+  "active": "d4bacf1382525949",
   "lastOpenFiles": [
-    "数式入力UI仕様.md",
     "Python.md",
+    "数式入力UI仕様.md",
     "ツール整理.md",
     "Git管理.md",
     "{{imageUrl}}.md",

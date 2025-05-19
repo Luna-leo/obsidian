@@ -146,3 +146,38 @@ headerはマルチカラムインデックス
 header = [plant_name, machine_no, data_source]
 index = [param_name_en, param_name_ja]
 values = param_id
+
+
+```python
+import numpy as np
+import pandas as pd
+
+# ── 0. カスタム順序を辞書で定義 ──────────────
+custom_order = {           # 好きな順序を 0,1,2… で
+    "パラメータA": 0,
+    "パラメータB": 1,
+    "パラメータX": 2,
+}
+
+# wide: すでに pivot 済みの DataFrame
+# index = (param_name_en, param_name_ja)
+
+wide_sorted = (
+    wide.reset_index()                                  # ⇐ MultiIndex → 列
+        .assign(                                        # ── 1. ソートキー列 ──
+            _key=lambda d: (
+                d["param_name_ja"]
+                  .map(custom_order)                    # 指定済み → 0,1,2…
+                  .fillna(np.inf)                      # 未指定 → 無限大
+            )
+        )
+        .sort_values(                                   # ── 2. 並べ替え ──
+            by=["_key", "param_name_ja", "param_name_en"]
+            # _key 昇順 ⇒ 指定ありが先
+            # 同 tie なら param_name_ja の昇順
+        )
+        .drop(columns="_key")                           # ── 3. 後片付け ──
+        .set_index(["param_name_en", "param_name_ja"])  # 列 → MultiIndex
+)
+
+```
