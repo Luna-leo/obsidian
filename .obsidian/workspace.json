@@ -190,7 +190,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 393.5
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -208,7 +209,7 @@
       "smart-composer:Open smart composer": false
     }
   },
-  "active": "dbf2cd3aec8e2574",
+  "active": "0072288efe82d408",
   "lastOpenFiles": [
     "Git管理.md",
     "ツール整理.md",
