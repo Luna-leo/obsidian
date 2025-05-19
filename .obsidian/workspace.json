@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "数式入力UI仕様.md",
+                "file": "Python.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "数式入力UI仕様"
+              "title": "Python"
             }
           },
           {
@@ -240,8 +240,8 @@
   },
   "active": "dab804895ff43dff",
   "lastOpenFiles": [
-    "Python.md",
     "数式入力UI仕様.md",
+    "Python.md",
     "ツール整理.md",
     "Git管理.md",
     "{{imageUrl}}.md",

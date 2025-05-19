@@ -130,3 +130,19 @@ con.close()
 この 2 ステップパターン（DataFrame → ビュー登録 → SELECT で永続化）を覚えておけば、Pandas と Polars のどちらでもほぼ同じ書き方で DuckDB への登録が行えます。
 
 
+### 縦持ちのデータフレームを横持ちにする方法
+
+縦持ちデータのカラム
+- pram_id
+- param_name_en
+- param_name_ja
+- plant_name
+- machine_no
+- data_source
+- insert_date
+
+横持ちにしたい
+headerはマルチカラムインデックス
+header = [plant_name, machine_no, data_source]
+index = [param_name_en, param_name_ja]
+values = param_id
