@@ -54,3 +54,87 @@ wide = (
     
 
 これで `param_name` が列として残り、行はデフォルトの整数インデックスになります。
+
+
+
+以下は **Python の DataFrame（Pandas / Polars）を DuckDB のテーブルに登録する最小構成サンプル** です。  
+ポイントは **① DataFrame を DuckDB に “ビュー” として登録 → ② `CREATE TABLE … AS SELECT …` または `INSERT INTO …`** の 2 段階で行うことです。
+
+---
+
+## 1. Pandas DataFrame を登録する例
+
+```python
+import pandas as pd
+import duckdb
+
+# ---- 0. サンプル DataFrame -------------------------------------------------
+df = pd.DataFrame(
+    {
+        "plant_name": ["Plant-A", "Plant-B"],
+        "machine_no": [101, 202],
+        "temperature": [78.3, 81.5],
+        "datetime": pd.to_datetime(["2025-05-19 12:00", "2025-05-19 12:05"]),
+    }
+)
+
+# ---- 1. DuckDB 接続（ファイル DB を作成／既存ファイルを開く）-------------
+con = duckdb.connect("data/sensor.duckdb")  # ':memory:' ならメモリ DB
+
+# ---- 2. DataFrame を一時ビューとして登録 -------------------------------
+con.register("tmp_df", df)                  # df → DuckDB 内部ビュー tmp_df
+
+# ---- 3-A. 新規テーブルとして保存 (存在しなければ作成) --------------------
+con.execute("""
+    CREATE TABLE IF NOT EXISTS sensor_data AS
+    SELECT * FROM tmp_df
+""")
+
+# ---- 3-B. 既存テーブルに追記したい場合 ------------------------------------
+# con.execute("INSERT INTO sensor_data SELECT * FROM tmp_df")
+
+# ---- 4. 後片付け ----------------------------------------------------------
+con.unregister("tmp_df")  # ビューを外す（省略可）
+con.close()
+```
+
+---
+
+## 2. Polars LazyFrame / DataFrame を登録する例
+
+DuckDB 0.9 以降なら Polars DataFrame を直接登録できます（内部で Arrow 変換）。
+
+```python
+import polars as pl
+import duckdb
+
+lf = pl.scan_csv("logs/sensor_20250519.csv", try_parse_dates=True)
+df = lf.collect()                            # 実体化（LazyFrame のままでも OK）
+
+con = duckdb.connect("data/sensor.duckdb")
+
+# Polars → DuckDB へ一時ビュー登録
+con.register("tmp_pl_df", df)                # → Arrow 経由で取り込まれる
+
+con.execute("""
+    CREATE OR REPLACE TABLE sensor_logs AS
+    SELECT * FROM tmp_pl_df
+""")
+
+con.close()
+```
+
+---
+
+### よくある質問 Q&A
+
+|Q|A|
+|---|---|
+|**既存テーブルに同じ列構成で追記するだけ？**|`INSERT INTO table SELECT * FROM tmp_view` にすれば OK。|
+|**型を明示したい**|`CREATE TABLE new_tbl (col1 INT, …); INSERT INTO …` の 2 ステップで。|
+|**重複防止・PK は？**|`CREATE TABLE … PRIMARY KEY (…)` でキー列を決め、`ON CONFLICT DO NOTHING` は未サポートなので重複チェック用の一時テーブルを挟むのが定石です。|
+|**大量データを高速ロード**|CSV/Parquet なら `COPY table FROM 'file.csv'`、Python 経由なら `con.execute("CREATE TABLE … AS SELECT * FROM read_parquet('file.parquet')")` の方が速いこともあります。|
+
+この 2 ステップパターン（DataFrame → ビュー登録 → SELECT で永続化）を覚えておけば、Pandas と Polars のどちらでもほぼ同じ書き方で DuckDB への登録が行えます。
+
+
