@@ -16,7 +16,7 @@
 
 ```bash
 # Data Grid Pro を使う場合（v6 以上を推奨）
-npm i @mui/x-data-grid-pro @mui/material @mui/icons-material @emotion/react @emotion/styled
+npm i @mui/x-data-grid-premium @mui/material @mui/icons-material @emotion/react @emotion/styled
 # Premium が必要なら pro → premium に読み替えてください
 ```
 
