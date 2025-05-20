@@ -78,7 +78,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -253,10 +253,10 @@
       "smart-composer:Open smart composer": false
     }
   },
-  "active": "d5e8d5221b74dd65",
+  "active": "cc252c35b6c6e1c6",
   "lastOpenFiles": [
-    "Python.md",
     "Nextjs.md",
+    "Python.md",
     "数式入力UI仕様.md",
     "ツール整理.md",
     "Git管理.md",
