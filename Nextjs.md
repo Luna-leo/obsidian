@@ -210,3 +210,10 @@ PRIMARY KEY( param_id, plant_name, machine_no, data_source )
 
 
 
+APIからデータを取得
+ヘッダー３行、インデックス列が２列のデータフレーム
+
+NextjsでMUI data gridを用いて　ヘッダー３行、インデックス列が２列のテーブルを表示したい。
+
+データはFastAPIから取得する予定だが、上記形状のテーブルで表示したい場合、
+データフレームをどのような形に変更して返せばよいか
