@@ -183,3 +183,24 @@ export default function SensorTable() {
     
 
 これで “三層ヘッダー＋左インデックス固定＋編集” の要件を一気に満たせます。さらに詳細な振る舞い（セルバリデーションや API 連携）を追加したい場合は、`processRowUpdate` 内で自由にロジックを挟んでください。
+
+
+
+
+
+
+DuckDBに登録されているデータを取得して画面上に表示したい。
+DuckDBに登録されているデータ
+
+parameter_id_master テーブル
+- param_id
+- param_name
+- param_name_ja
+- plant_name
+- machine_no
+- data_source
+- insert_date
+
+このテーブルからデータを取得する。
+取得後縦持ちデータを横持ちデータに変形する。
+カラムヘッダーはplant_name, machine_no, da
