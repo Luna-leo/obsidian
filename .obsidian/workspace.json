@@ -36,6 +36,20 @@
             }
           },
           {
+            "id": "d5e8d5221b74dd65",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Nextjs.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Nextjs"
+            }
+          },
+          {
             "id": "dab804895ff43dff",
             "type": "leaf",
             "state": {
@@ -64,27 +78,7 @@
             }
           }
         ],
-        "currentTab": 1
-      },
-      {
-        "id": "75cb0093c79ef4ba",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "d4bacf1382525949",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "数式入力UI仕様.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "数式入力UI仕様"
-            }
-          }
-        ]
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -141,8 +135,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "10c725e97045c940",
@@ -259,10 +252,11 @@
       "smart-composer:Open smart composer": false
     }
   },
-  "active": "cc252c35b6c6e1c6",
+  "active": "d5e8d5221b74dd65",
   "lastOpenFiles": [
-    "数式入力UI仕様.md",
     "Python.md",
+    "Nextjs.md",
+    "数式入力UI仕様.md",
     "ツール整理.md",
     "Git管理.md",
     "{{imageUrl}}.md",
@@ -289,7 +283,6 @@
     "BOOKS/Obsidianでつなげる情報管理術【完成版】.md",
     "BOOKS/風の歌を聴け.md",
     "BOOKS/最短突破　データサイエンティスト検定（リテラシーレベル）公式リファレンスブック.md",
-    "BOOKS/完全無欠の問題解決.md",
     "BOOKS"
   ]
 }
