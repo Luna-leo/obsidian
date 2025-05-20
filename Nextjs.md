@@ -186,21 +186,27 @@ export default function SensorTable() {
 
 
 
-
-
-
+```planetext
 DuckDBに登録されているデータを取得して画面上に表示したい。
 DuckDBに登録されているデータ
-
 parameter_id_master テーブル
-- param_id
-- param_name
-- param_name_ja
-- plant_name
-- machine_no
-- data_source
-- insert_date
+- param_id　TEXT
+- param_name　TEXT
+- param_name_ja　TEXT
+- plant_name　TEXT
+- machine_no　TEXT
+- data_source　TEXT
+- insert_date　TIMESTAMP
+PRIMARY KEY( param_id, plant_name, machine_no, data_source )
 
 このテーブルからデータを取得する。
 取得後縦持ちデータを横持ちデータに変形する。
-カラムヘッダーはplant_name, machine_no, da
+カラムヘッダーはplant_name, machine_no, data_source　の３行のヘッダーとしたい。
+行インデックスは、param_name_en, param_name_ja の２列として固定したい。
+データとして表示する内容はparam_idを表示したい。
+```
+
+
+
+
+
