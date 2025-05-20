@@ -65,26 +65,6 @@
           }
         ],
         "currentTab": 2
-      },
-      {
-        "id": "a7844f4ebad30806",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "dab804895ff43dff",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "数式入力UI仕様.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "数式入力UI仕様"
-            }
-          }
-        ]
       }
     ],
     "direction": "vertical"
@@ -259,10 +239,10 @@
       "smart-composer:Open smart composer": false
     }
   },
-  "active": "dab804895ff43dff",
+  "active": "d5e8d5221b74dd65",
   "lastOpenFiles": [
-    "Nextjs.md",
     "数式入力UI仕様.md",
+    "Nextjs.md",
     "Python.md",
     "ツール整理.md",
     "Git管理.md",

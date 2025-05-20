@@ -208,12 +208,22 @@ PRIMARY KEY( param_id, plant_name, machine_no, data_source )
 
 
 
+FastAPI（Python）でDuckDBからデータ取得して、以下内容でUI上に表示する
+- ヘッダー３行（plant_name, machin_no, data_source
+- インデックス列２列（param_name_en, param_name_ja）
+- dataはparam_idを表示する。
 
+ DuckDBのテーブル構成（parameter_id_master テーブル）は以下
+- param_id　TEXT 
+- param_name_en　TEXT 
+- param_name_ja　TEXT 
+- plant_name　TEXT 
+- machine_no　TEXT 
+- data_source　TEXT 
+- insert_date　TIMESTAMP
+PRIMARY KEY( param_id, plant_name, machine_no, data_source )
 
-APIからデータを取得
-ヘッダー３行、インデックス列が２列のデータフレーム
+UIはMUI data gridを用いてテーブル表示したい。  （premiumのライセンスあり）
+バックエンドの処理は仮実装として、ダミーデータでＡＰＩから取得したとして、
+フロント側の処理を実装してほしい。
 
-NextjsでMUI data gridを用いて　ヘッダー３行、インデックス列が２列のテーブルを表示したい。
-
-データはFastAPIから取得する予定だが、上記形状のテーブルで表示したい場合、
-データフレームをどのような形に変更して返せばよいか
