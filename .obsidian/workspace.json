@@ -8,91 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "0072288efe82d408",
+            "id": "46ca6382b0bc5957",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ツール整理.md",
+                "file": "画面仕様設計.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ツール整理"
-            }
-          },
-          {
-            "id": "cc252c35b6c6e1c6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Python.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Python"
-            }
-          },
-          {
-            "id": "d5e8d5221b74dd65",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Nextjs.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Nextjs"
-            }
-          },
-          {
-            "id": "0d55c31bb2240ed1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Nextjs-SQL Server.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Nextjs-SQL Server"
-            }
-          },
-          {
-            "id": "c1087bef10c76737",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Nextjs-API.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Nextjs-API"
-            }
-          },
-          {
-            "id": "548695d9d7bfed39",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Git管理.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Git管理"
+              "title": "画面仕様設計"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -266,15 +195,16 @@
       "smart-composer:Open smart composer": false
     }
   },
-  "active": "c1087bef10c76737",
+  "active": "46ca6382b0bc5957",
   "lastOpenFiles": [
+    "数式入力UI仕様.md",
+    "画面仕様設計.md",
+    "Git管理.md",
+    "Nextjs.md",
     "Nextjs-SQL Server.md",
     "Nextjs-API.md",
-    "Nextjs.md",
     "Python.md",
-    "数式入力UI仕様.md",
     "ツール整理.md",
-    "Git管理.md",
     "{{imageUrl}}.md",
     "BOOKS/Google流 資料作成術.md",
     "BOOKS/「すぐやる人」のノート術.md",
@@ -296,7 +226,6 @@
     "BOOKS/世界で一番やさしい 資料作りの教科書.md",
     "BOOKS/トーリー式最強ポルチオ開発法-初級編-.md",
     "大阪万博.md",
-    "BOOKS/Obsidianでつなげる情報管理術【完成版】.md",
     "BOOKS"
   ]
 }
