@@ -8,12 +8,12 @@ API Route は Node.js ランタイムで動的に動く機能なので、静的�
 
 ### 対応パターン
 
-|パターン|長所|短所 / 注意|
-|---|---|---|
-|**A. `next start` を動かす**1. `next build`2. `next start -p 11700` でアプリを常駐3. IIS (ARR + URL Rewrite など) で `http://server:11700` にリバースプロキシ|現在のコードのまま API Route が使える|サーバーに Node.js が常駐する構成が必要|
-|**B. iisnode を使う**pages ディレクトリごと IIS に配置し、`iisnode` で Node プロセスをホスト|Windows/IIS ネイティブにまとまる|iisnode はメンテがやや停滞気味、設定が複雑|
-|**C. API を別サービス化**API Route 部分を Express / FastAPI / Azure Functions などに移してフロントエンドは純静的サイト (`out` フォルダ)|IIS で単なる静的配信で済む|フロントエンド側の fetch URL を別ドメイン / パスに変更する必要がある|
-|**D. App Router + Route Handlers (Edge / Node)**Next 14 以降の `/app/{route}/route.js` でも、実行時に動くため結局 Node/Edge ランタイムが要る。静的配信だけでは動かない|最も新しい構文|静的エクスポートではやはり 404|
+| パターン                                                                                                                                   | 長所                       | 短所 / 注意                                   |
+| -------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ----------------------------------------- |
+| **A. `next start` を動かす**1. `next build`2. `next start -p 11700` でアプリを常駐3. IIS (ARR + URL Rewrite など) で `http://server:11700` にリバースプロキシ | 現在のコードのまま API Route が使える | サーバーに Node.js が常駐する構成が必要                  |
+| **B. iisnode を使う**pages ディレクトリごと IIS に配置し、`iisnode` で Node プロセスをホスト                                                                    | Windows/IIS ネイティブにまとまる   | iisnode はメンテがやや停滞気味、設定が複雑                 |
+| **C. API を別サービス化**API Route 部分を Express / FastAPI / Azure Functions などに移してフロントエンドは純静的サイト (`out` フォルダ)                                  | IIS で単なる静的配信で済む          | フロントエンド側の fetch URL を別ドメイン / パスに変更する必要がある |
+| **D. App Router + Route Handlers (Edge / Node)**Next 14 以降の `/app/{route}/route.js` でも、実行時に動くため結局 Node/Edge ランタイムが要る。静的配信だけでは動かない      | 最も新しい構文                  | 静的エクスポートではやはり 404                         |
 
 ---
 
